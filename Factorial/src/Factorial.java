@@ -1,3 +1,4 @@
+import java.util.Scanner;
 
 public class Factorial {
 
@@ -9,25 +10,21 @@ public class Factorial {
 			return a * f_Factorial(a-1);
 	}
 		
-	public static void main(String[] args) {	
-		int n = 10;
+	public static void main(String[] args) {
+		int n;
+System.out.println("Enter an integer to calculate it's factorial");
+      Scanner in = new Scanner(System.in);
+     
+      n = in.nextInt();
+     
+      if (n < 0)
+         System.out.println("Number should be non-negative.");
+      else
+      {
 		int result = f_Factorial(n);
-		System.out.printf("El factorial de %d es %d.\n",n, result);
-		
-		int r = 5;
-		result = f_Factorial(r);
-		System.out.printf("El factorial de %d es %d.\n",r, result);
-		
-		/*int r = 5;
-		result = f_Factorial(r);
-		System.out.printf("El factorial de %d es %d.\n",r, result);
-		
-		int r = 5;
-		result = f_Factorial(r);
-		System.out.printf("El factorial de %d es %d.\n",r, result);*/
-		
-		int f = 8;
-		result = f_Factorial(f);
-		System.out.printf("El factorial de %d es %d.\n",f, result);
+		System.out.printf(" factorial of number %d is %d.\n",n, result);
+      
 	}
 }
+}
+
